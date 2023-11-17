@@ -6,9 +6,11 @@ var textarea = $(".textarea");
 var saveButton = $(".saveBtn");
 var hourBox = $("button");
 var headline = $("#currentDay")
+var hourPast = $("#hour-9");
+var hourCurrent = $("hour-10");
+var hourFuture = $("hour-11");
 var currentTime = dayjs().format('MMM DD, YYYY h:s a');
-var value = $(this)
-
+var value = $(this) 
 
 
 
@@ -19,9 +21,15 @@ console.log(currentTime);
 
 $(function () {
   currentHour = dayjs(hourBox.val())
-saveButton.on('click', function () {
-  $('.saveBtn').
+saveButton.on('click', function (event) {
+var TimeBlock = event.currentTarget.parentElement
+  console.log(TimeBlock)
+  var TimeBlockId = TimeBlock.id
+  console.log(TimeBlockId)
+  var TimeBlockText = 
 })
+
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -36,6 +44,8 @@ saveButton.on('click', function () {
   // current hour in 24-hour time?
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
+
+  
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
